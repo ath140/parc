@@ -1,3 +1,23 @@
+<?php
+ include_once('phpfiles/connection.php');
+ session_start();
+ if(isset($_POST['click_btn']))
+ {
+    $email=$_POST['email_txt'];
+    $key=$_POST['passe'];
+
+    $donnee = $conne->prepare("select* from access where Email_user='$email' AND Password_user='$key'");
+    $donnee->execute();
+
+    $row=$donnee->fetch(PDO::FETCH_ASSOC);
+
+    if($row['Email_user']==$email && $row['Password_user']==$key)
+    {
+       header('refresh:1; phpfiles/user.php');
+    }
+ }else{
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +39,7 @@
             </div>
             <div class="input-group">
                 <i class="fa fa-key"></i>
-                <input type="text" name="email_txt">
+                <input type="text" name="passe">
             </div>
             <button type="submit" name="click_btn">connecter</button>
         </form>
