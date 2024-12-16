@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url('/images/eau.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content{
+    position: absolute;
+    top:40%;
+    left:35%;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 100;
+}
+.content h1 spam{
+    color:tomato;
+}
+.content a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    text-align:right;
+}
